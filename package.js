@@ -12,8 +12,9 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('segmentation.js', 'client');
-  api.export(['Seg', 'Seg2'], 'client');
+  api.use('coffeescript', 'server');
+  api.addFiles('segmentation.coffee', 'server');
+  api.export(['Seg'], 'server');
 });
 
 Package.onTest(function(api) {
