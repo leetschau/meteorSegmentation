@@ -20,5 +20,5 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('leechau:segmentation');
-  api.addFiles('segmentation-tests.js');
+  api.addFiles('segmentation-tests.js', 'server');
 });

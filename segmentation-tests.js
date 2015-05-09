@@ -1,5 +1,3 @@
-// Write your tests here!
-// Here is an example.
 Tinytest.add('splitBasic', function (test) {
   test.equal(Seg.parse("May   7th"),  ["May", "7th"]);
 });
