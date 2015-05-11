@@ -12,13 +12,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use('coffeescript', 'server');
-  api.addFiles('segmentation.coffee', 'server');
+  api.use('underscore', 'server');
+  api.addFiles('segmentation.js', 'server');
   api.export(['Seg'], 'server');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('leechau:segmentation');
+  api.use('underscore', 'server');
+  api.addFiles('test-stubs.js', 'server');
   api.addFiles('segmentation-tests.js', 'server');
 });
