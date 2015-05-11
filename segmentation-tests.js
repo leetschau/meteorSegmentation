@@ -14,3 +14,9 @@ Tinytest.add('splitWithDict', function (test) {
   test.equal(Seg.parse("科隆五金展", dict),
     ["科隆","五金","展"]);
 });
+
+Tinytest.add('splitLongWords', function (test) {
+  dict = ['南方周末', '中国', '口号', '这里'];
+  test.equal(Seg.parse("在这里读懂中国是南方周末的口号", dict),
+    ["科隆","五金","展"]);
+});
