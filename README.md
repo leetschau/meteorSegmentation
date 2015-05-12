@@ -1,27 +1,16 @@
 This package is for Chinese segmentation.
 
-Upload your vocabulary into mongoDB,
+Upload your vocabulary dictionary into a mongoDB,
 then run segmentation based on this vocabulary.
 
-For example, if you input "牛奶和面包",
-the output are "牛奶", "和" and "面包".
+For example, if your segmentation dictionary contains "牛奶" and "面包",
+now input "牛奶和面包",
+you get a list: "牛奶", "和" and "面包".
+
+See demo application [segmentationDemo](https://github.com/leetschau/segmentationDemo) for details.
 
 # Install
 
-Option 1:
+In your Meteor application directory, run:
 
-1. Create folder "packages" in app root folder;
-
-1. In "packages" folder, run `git clone https://github.com/leetschau/meteorSegmentation.git segmentation`.
-
-Option 2:
-
-1. In folder "/path/to/packages" run `git clone https://github.com/leetschau/meteorSegmentation.git segmentation`;
-
-1. Create folder "packages" in app root folder;
-
-1. In "packages" folder, run `ln -s /path/to/packages/segmentation segmentation`.
-
-# Usage
-
-See repository [segmentationDemo](https://github.com/leetschau/segmentationDemo).
+    meteor add leechau:segmentation
