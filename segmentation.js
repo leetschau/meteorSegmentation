@@ -21,8 +21,7 @@ Seg = {
 
     var chnWords = _.chain(chnParts)
       .map(function(inp) { return findWords(inp); })
-      .flatten().value()
-      .filter(function(inp){ return inp.trim(); });
+      .flatten().compact().value();
     return nonChn.concat(chnWords);
   }
 };
